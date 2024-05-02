@@ -98,7 +98,7 @@ export const GCFRegex = (globalConfig: ConfigParams): PluginInterface => {
     }
 
     let result = '';
-    for (let i = 0; i < matchedItem.length; i++) {
+    for (let i = 1; i < matchedItem.length; i++) {
       result += matchedItem[i] + ' ';
     }
 
