@@ -1,1 +1,2 @@
-export {MyCustomPlugin} from './my-custom-plugin';
+/* eslint-disable prettier/prettier */
+export { GCFRegex } from './gcf-regex';

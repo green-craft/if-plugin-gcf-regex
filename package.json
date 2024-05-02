@@ -1,16 +1,17 @@
 {
-  "name": "if-plugin-template",
-  "description": "Impact Framework plugins template.",
+  "name": "if-gcf-plugin-regex",
+  "description": "Customized Regular Expression plugin that will run in Impact Framework of Green Software Foundation.",
   "version": "v0.1.0",
   "author": {
-    "name": "Green Software Foundation",
-    "email": "info@gsf.com"
+    "name": "green-craft",
+    "email": "notyet@email.com"
   },
   "bugs": {
-    "url": "https://github.com/Green-Software-Foundation/if-plugin-template/issues/new?assignees=&labels=feedback&projects=&template=feedback.md&title=Feedback+-+"
+    "url": "https://github.com/green-craft/if-plugin-gcf-regex/issues"
   },
   "dependencies": {
-    "typescript": "^5.1.6"
+    "typescript": "^5.4.5",
+    "zod": "^3.23.5"
   },
   "devDependencies": {
     "@babel/core": "7.22.10",
@@ -29,12 +30,12 @@
     "node": ">=18",
     "npm": ">=8"
   },
-  "homepage": "https://greensoftware.foundation",
+  "homepage": "https://github.com/green-craft/if-plugin-gcf-regex",
   "keywords": [],
   "license": "MIT",
   "main": "build/index.js",
   "repository": {
-    "url": "https://github.com/Green-Software-Foundation/if-plugin-template.git"
+    "url": "https://github.com/green-craft/if-plugin-gcf-regex.git"
   },
   "scripts": {
     "build": "npm run clean && tsc --project tsconfig.build.json",
