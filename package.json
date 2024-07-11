@@ -47,7 +47,7 @@
     "fix": "gts fix",
     "fix:package": "fixpack",
     "lint": "gts lint",
-    "prepare": "husky install && npm run build",
+    "prepare": "npm run build",
     "prepublish": "npm run build",
     "test": "jest --verbose"
   }
