@@ -48,7 +48,6 @@
     "fix:package": "fixpack",
     "lint": "gts lint",
     "prepare": "npm run build",
-    "prepublish": "npm run build",
     "test": "jest --verbose"
   }
 }
