@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
-. "$(pwd)/.husky/_/husky.sh"
-# . "$(dirname "$0")/_/husky.sh"
-# echo "Running lint..."
-# npm run lint
+# . "$(pwd)/.husky/_/husky.sh"
+. "$(dirname "$0")/_/husky.sh"
+echo "Running lint..."
+npm run lint
 echo "Running tests..."
 npm test
 echo "Running fix:package..."
