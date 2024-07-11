@@ -113,7 +113,7 @@ export const GCFRegex = (globalConfig: ConfigParams): PluginInterface => {
       result += matchedItem[i] + ' ';
     }
     console.warn(`[GCF Custom plugin] =====Result of instance type is ${result}. Matching case`)
-    let matched_result = caseMatch(result.trim())
+    const matched_result = caseMatch(result.trim())
 
     return matched_result; // remove trailing space from final result
   };
