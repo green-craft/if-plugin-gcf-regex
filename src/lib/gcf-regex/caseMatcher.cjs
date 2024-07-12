@@ -28,9 +28,12 @@ function matchTypes(toCompare, instanceList, depth) {
         if (upperToCompare.trim() === instanceList[i].toUpperCase().trim()) {
             return instanceList[i];
         }
+        // else{
+        //     console.info(`Comparing ${upperToCompare} to ${instanceList[i].toUpperCase()} flags false`)
+        // }
     }
     if (depth == 0) {
-        throw Error("[GCF Plugin] The instance type ".concat(toCompare, " is not supported"));
+        throw Error(`[GCF Plugin] The instance type ${toCompare} is not supported`);
     }
     refreshList();
     console.info("Refreshing list... ")
