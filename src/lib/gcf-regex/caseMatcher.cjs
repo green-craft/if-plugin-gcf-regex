@@ -1,3 +1,5 @@
+
+module.exports = caseMatch;
 var path = require('path');
 var path_to_instance_text = path.join(__dirname, 'instanceTypes.txt');
 function readFile(filename) {
@@ -41,7 +43,7 @@ function sleep(ms){
     return new Promise(resolve => setTimeout(resolve,ms))
 }
 
-export function caseMatch(toCompare){
+function caseMatch(toCompare){
     console.info("Entering caseMatch function...\n        Path to file: ".concat(path_to_instance_text, ",\n        String to compare: ").concat(toCompare));
     let res= matchTypes(toCompare, readFile(path_to_instance_text));
     console.log(`Matched result: ${toCompare} is ${res}`)

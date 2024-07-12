@@ -7,7 +7,7 @@ import { validate } from '../../util/validations';
 
 import { PluginInterface } from '../../interfaces';
 import { ConfigParams, PluginParams } from '../../types/common';
-import { caseMatch } from './caseMatcher.cjs';
+import caseMatch = require("./caseMatcher.cjs")
 
 const { InputValidationError, ConfigValidationError } = ERRORS;
 
