@@ -11,9 +11,10 @@
   },
   "dependencies": {
     "copyfiles": "^2.4.1",
-    "if-plugin-gcf-regex": "github:green-craft/if-plugin-gcf-regex#with-case-checking",
     "octokit": "4.0.2",
-    "zod": "^3.23.5"
+    "zod": "^3.23.5",
+    "@grnsft/if-plugins": "0.3.2",
+    "@grnsft/if-unofficial-plugins": "0.3.1"
   },
   "devDependencies": {
     "@babel/core": "7.22.10",
