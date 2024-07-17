@@ -42,7 +42,7 @@
   },
   "scripts": {
     "auto-link": "npm link && npm link if-plugin-regex-gcf",
-    "build": "npm run clean && tsc --project tsconfig.build.json && copyfiles -u 3 ./src/lib/gcf-regex/*.txt ./build/lib/gcf-regex/ && npm run auto-link",
+    "build": "npm run clean && tsc --project tsconfig.build.json && copyfiles -u 3 ./src/lib/gcf-regex/*.txt ./build/lib/gcf-regex/",
     "clean": "rimraf build/",
     "coverage": "jest --verbose --coverage",
     "fix": "gts fix",
