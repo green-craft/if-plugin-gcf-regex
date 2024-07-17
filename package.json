@@ -41,6 +41,7 @@
     "url": "https://github.com/green-craft/if-plugin-gcf-regex.git"
   },
   "scripts": {
+    "install": "npm link && npm link if-plugin-gcf-regex",
     "build": "npm run clean && tsc --project tsconfig.build.json && copyfiles -u 3 ./src/lib/gcf-regex/*.txt ./build/lib/gcf-regex/",
     "clean": "rimraf build/",
     "coverage": "jest --verbose --coverage",
