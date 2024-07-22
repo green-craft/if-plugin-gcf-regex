@@ -11,10 +11,7 @@
   },
   "dependencies": {
     "copyfiles": "^2.4.1",
-    "octokit": "4.0.2",
-    "zod": "^3.23.5",
-    "@grnsft/if-plugins": "0.3.2",
-    "@grnsft/if-unofficial-plugins": "0.3.1"
+    "zod": "^3.23.5"
   },
   "devDependencies": {
     "@babel/core": "7.22.10",
@@ -41,7 +38,6 @@
     "url": "https://github.com/green-craft/if-plugin-gcf-regex.git"
   },
   "scripts": {
-    "auto-link": "npm link && npm link if-plugin-regex-gcf",
     "build": "npm run clean && tsc --project tsconfig.build.json && copyfiles -u 3 ./src/lib/gcf-regex/*.txt ./build/lib/gcf-regex/",
     "clean": "rimraf build/",
     "coverage": "jest --verbose --coverage",
