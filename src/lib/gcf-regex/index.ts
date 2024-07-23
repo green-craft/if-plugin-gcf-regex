@@ -7,6 +7,7 @@ import { validate } from '../../util/validations';
 
 import { PluginInterface } from '../../interfaces';
 import { ConfigParams, PluginParams } from '../../types/common';
+import caseMatch from './caseMatcher'
 
 const { InputValidationError, ConfigValidationError } = ERRORS;
 
@@ -86,6 +87,10 @@ export const GCFRegex = (globalConfig: ConfigParams): PluginInterface => {
       match += '/';
     }
 
+    console.warn(`[GCF Custom plugin] Executing...,
+      input parameter is ${JSON.stringify(input)}
+      
+      `)
     const regex = eval(match);
     const matchedItem = input[parameter].match(regex);
 
@@ -97,12 +102,20 @@ export const GCFRegex = (globalConfig: ConfigParams): PluginInterface => {
       );
     }
 
+    console.warn(`[GCF Custom plugin] Here are your inputs:
+      regex input: ${regex},
+      input string: ${input[parameter]},
+      matched items: ${matchedItem} with type ${typeof(matchedItem)} and length ${matchedItem.length}}
+      `)
+
     let result = '';
-    for (let i = 1; i < matchedItem.length; i++) {
+    for (let i = 0; i < matchedItem.length; i++) {
       result += matchedItem[i] + ' ';
     }
+    console.warn(`[GCF Custom plugin] =====Result of instance type is ${result}. Matching case`)
+    const matched_result = caseMatch(result.trim())
 
-    return result.trim(); // remove trailing space from final result
+    return matched_result.trim(); // remove trailing space from final result
   };
 
   return {

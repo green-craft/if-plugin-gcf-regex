@@ -10,7 +10,7 @@ describe('lib/gcf-regex: ', () => {
   describe('GCFRegex: ', () => {
     const globalConfig = {
       parameter: 'cloud/instance-type',
-      match: '^[A-z]*_([^_]+?)_([^_]+?)$',
+      match: '/(?<=_)[^_]+?(?=_|$)/g',
       output: 'gcf-cloud/instance-type',
     };
     const regex = GCFRegex(globalConfig);
